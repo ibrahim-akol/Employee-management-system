@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="leave" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     leave_request.`id` AS leave_request_id,
+     leave_request.`leave_time` AS leave_request_leave_time,
+     leave_request.`report_time` AS leave_request_report_time,
+     leave_request.`Description` AS leave_request_Description
+FROM
+     `leave_request` leave_request]]>
+	</queryString>
+	<field name="leave_request_id" class="java.lang.String"/>
+	<field name="leave_request_leave_time" class="java.lang.String"/>
+	<field name="leave_request_report_time" class="java.lang.String"/>
+	<field name="leave_request_Description" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="67">
+			<image>
+				<reportElement x="83" y="0" width="111" height="63"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\dj steve\\Documents\\NetBeansProjects\\Employee\\src\\Steve\\images\\steve-logo-2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="194" y="0" width="247" height="63" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PCEA NAIVASHA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35">
+			<staticText>
+				<reportElement x="194" y="0" width="164" height="35" forecolor="#FF3333"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LEAVE RECORDS]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="441" y="0" width="114" height="20" forecolor="#0000FF"/>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="56" y="0" width="100" height="20"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Top" lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEE ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="0" width="100" height="20"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LEAVE TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="0" width="100" height="20"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Top" lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORT TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="0" width="100" height="20"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46">
+			<textField>
+				<reportElement x="56" y="0" width="100" height="46"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{leave_request_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="0" width="100" height="46"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{leave_request_leave_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="100" height="46"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{leave_request_report_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="0" width="100" height="46"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed" lineColor="#999999"/>
+				</box>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{leave_request_Description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54">
+			<textField>
+				<reportElement x="219" y="16" width="80" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="299" y="16" width="40" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="1"/>
+	</summary>
+</jasperReport>

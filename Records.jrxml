@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Records" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11465ddd-b4db-401a-a735-47c0761790bd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="new" uuid="c5b1060c-25af-4ae2-86e7-86c4c7f893a6">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     register.`id` AS register_id,
+     register.`firstname` AS register_firstname,
+     register.`lastname` AS register_lastname,
+     register.`Gender` AS register_Gender,
+     register.`Department` AS register_Department,
+     register.`work_position` AS register_work_position,
+     register.`Username` AS register_Username,
+     register.`password` AS register_password,
+     register.`Profile` AS register_Profile
+FROM
+     `register` register]]>
+		</queryString>
+		<field name="register_id" class="java.lang.String"/>
+		<field name="register_firstname" class="java.lang.String"/>
+		<field name="register_lastname" class="java.lang.String"/>
+		<field name="register_Gender" class="java.lang.String"/>
+		<field name="register_Department" class="java.lang.String"/>
+		<field name="register_work_position" class="java.lang.String"/>
+		<field name="register_Username" class="java.lang.String"/>
+		<field name="register_password" class="java.lang.String"/>
+		<field name="register_Profile" class="java.lang.Object"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     register.`id` AS register_id,
+     register.`firstname` AS register_firstname,
+     register.`lastname` AS register_lastname,
+     register.`Gender` AS register_Gender,
+     register.`Department` AS register_Department,
+     register.`work_position` AS register_work_position,
+     register.`Username` AS register_Username,
+     register.`password` AS register_password,
+     register.`Profile` AS register_Profile
+FROM
+     `register` register]]>
+	</queryString>
+	<field name="register_id" class="java.lang.String"/>
+	<field name="register_firstname" class="java.lang.String"/>
+	<field name="register_lastname" class="java.lang.String"/>
+	<field name="register_Gender" class="java.lang.String"/>
+	<field name="register_Department" class="java.lang.String"/>
+	<field name="register_work_position" class="java.lang.String"/>
+	<field name="register_Username" class="java.lang.String"/>
+	<field name="register_password" class="java.lang.String"/>
+	<field name="register_Profile" class="java.awt.Image"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d9bb83ba-b35b-4575-924b-1a7328e37d31" x="19" y="24" width="496" height="29" forecolor="#FF3333"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PCEA NAIVASHA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e4c67779-8fc9-41c4-bc2d-22cbc45cc745" x="418" y="2" width="27" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[As at ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement uuid="089b54de-c608-4951-b9e7-1f07a6580ab9" x="445" y="2" width="100" height="20" forecolor="#3333FF"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6d746850-c9f0-47c8-9336-235059de474b" x="200" y="2" width="152" height="20" forecolor="#0000FF"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES RECORDS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="46748de2-4e1d-4078-994b-214250de6b43" style="table_TH" x="92" y="17" width="61" height="20" forecolor="#006666"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="66227d71-60c3-492a-9141-644a133cacc7" style="table_TH" x="218" y="17" width="52" height="20" forecolor="#006666"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="75fac432-a441-4abf-b8da-39b75772ad76" style="table_TH" x="270" y="17" width="82" height="20" forecolor="#006666"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3717948-3dbb-4374-9351-1f6c3ae319c2" style="table_TH" x="352" y="17" width="90" height="20" forecolor="#006666"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Work_position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="27b6bf27-7653-4aad-a119-6d37b2447ce9" style="table_TH" x="442" y="17" width="100" height="20" forecolor="#006666"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b26b9e7-d471-4387-bb37-bea3004fa03c" style="table_TH" x="23" y="17" width="69" height="20" forecolor="#006666"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9c81a6ee-6b3c-4b66-a322-72843a006ef6" style="table_TH" x="153" y="17" width="65" height="20" forecolor="#006666"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1dd952f4-168e-4e81-8e9f-e1d2c1c880ab" style="table_TD" x="23" y="0" width="69" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="526a9192-c798-4ed3-8803-1a2c8d7a17ba" style="table_TD" x="92" y="0" width="61" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="92f31458-2edd-4c31-aa9c-577741294d81" style="table_TD" x="153" y="0" width="65" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c7532b1a-bc86-4c20-a6ac-ff05fe5c09b1" style="table_TD" x="218" y="0" width="52" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0cf28330-69ae-4933-b3ff-5e68fd27a9d8" style="table_TD" x="270" y="0" width="82" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d5706c32-04db-4615-9d63-5d0efe230799" style="table_TD" x="352" y="0" width="90" height="42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{register_work_position}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement uuid="86655fea-b755-49b8-9a93-c09f62710284" style="table_TD" x="442" y="0" width="100" height="42"/>
+				<imageExpression><![CDATA[$F{register_Profile}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="03ac0dda-87d8-4f13-996d-f2b19604f341" x="200" y="2" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="cb9bb78d-89d3-46c7-8546-0d0fad1041f9" x="280" y="2" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="24" splitType="Stretch"/>
+	</summary>
+</jasperReport>
